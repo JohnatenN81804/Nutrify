@@ -16,3 +16,8 @@
 - event planning
 - finance record app
 - fantasy football app
+- Fitness app
+- virtual study groups
+- music sharing and discovery
+- local tour guide app
+- job application and resume tracker
