@@ -46,7 +46,7 @@
 ## Day 2 TODO 
 - Make boiler plate express and sequelize files 
 - Back-end John, Peter
-- Front-end Johnaten, Beth
+- Front-end Johnaten/Home Page, Beth/Login-Signup page
 
 
 ## Day 2 Landing page skeleton
