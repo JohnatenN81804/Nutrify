@@ -36,6 +36,25 @@ hi
 
 - Do a pull request
 
+## Back-end development 
+
+- Data Base design
+  - what data are we storing?
+  - MySQL
+  - Data handling
+
+- Install necessary tools
+  - Dependencies
+
+- API End-Points
+
+- Authenticator
+
+- Middleware 
+  - input validation
+
+
+
 ## Day 1 TODO
 - [X] Plan the project 
 - [X] Figure out the MVP 
