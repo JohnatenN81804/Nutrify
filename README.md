@@ -12,9 +12,9 @@
 
 
 ## MVP IDEA
-- Fitness/Nutrition Tracker
+- Nutrition Tracker
 - Form = Login/Sign Up,
-- Database = MySQL,  Nutrition Counter, Diet counter, Protein,
+- Database = MySQL,  Nutrition Counter, Protein,
 - Front-End = Bootstrap, JQuery, 
 - Back-End = HandleBars, Sequelize, 
 
@@ -43,6 +43,11 @@
 - [X] Find API 
 
 
-## Day 2 TODO
+## Day 2 TODO 
+- Make boiler plate express and sequelize files 
+- Back-end John, Peter
+- Front-end Johnaten, Beth
 
 
+## Day 2 Landing page skeleton
+![Alt text](image.png)
