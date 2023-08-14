@@ -74,7 +74,10 @@ hi
 
 
 
-## Day 3
+## Day 3 TODO
 
-- 
+- Get landing finished
+- Get somewhere with the login front end 
+- Setup the express routes
+- Start on handlebars
 
