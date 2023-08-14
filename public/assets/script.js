@@ -39,6 +39,8 @@ function handleSignUp(event) {
   storedUsers.push(user);
   localStorage.setItem('users', JSON.stringify(storedUsers));
 
+  alert('Sign-up successful! You can now log in with your credentials.');
+  
   // Redirect to login page after successful sign-up
   location.href = 'login.html';
 }
@@ -59,13 +61,16 @@ function handleLogin(event) {
 
   const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
   const user = storedUsers.find(u => u.email === email && u.password === password);
+  
   if (user) {
-      console.log('Login successful');
+      
+    alert ("Login succesful!")
 
-      // Redirect the user to the main page
-      location.href = 'index.html'; 
-  } else {
-      console.log('Login failed. Invalid credentials.');
+    // Redirect the user to the main page if succesful login
+
+    location.href = 'index.html'; 
+} else {
+    alert ("Login failed! Please try again with correct credentials")
   }
 }
 
