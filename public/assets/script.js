@@ -28,16 +28,46 @@ function handleSignUp(event) {
 
   // Check if passwords match
   if (password !== verifyPassword) {
-      alert('Passwords do not match. Please try again.');
-      return;
+    alert('Passwords do not match. Please try again.');
+    return;
   }
 
-  console.log('User signed up:');
-  console.log('Email:', email);
-  console.log('Password:', password);
+  const user = { email, password };
+  const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
 
-  location.href = 'login.html'
+  // Push the new user to the array and store in local storage
+  storedUsers.push(user);
+  localStorage.setItem('users', JSON.stringify(storedUsers));
+
+  // Redirect to login page after successful sign-up
+  location.href = 'login.html';
 }
 
 document.getElementById('signUp').addEventListener('click', handleSignUp);
+
+// Function to handle the login process
+function handleLogin(event) {
+  event.preventDefault(); 
+
+
+  // Collect user login credentials from the login form
+  const emailInput = document.querySelector('input[name="email-name"]');
+  const passwordInput = document.querySelector('input[name="password"]');
+
+  const email = emailInput.value;
+  const password = passwordInput.value;
+
+  const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+  const user = storedUsers.find(u => u.email === email && u.password === password);
+  if (user) {
+      console.log('Login successful');
+
+      // Redirect the user to the main page
+      location.href = 'index.html'; 
+  } else {
+      console.log('Login failed. Invalid credentials.');
+  }
+}
+
+document.getElementById('login').addEventListener('click', handleLogin);
 
