@@ -1,12 +1,12 @@
-
 body {
     background: url('./images/shutterstock_568543210.png');
+}
 
 :root {
     --primary-green: #75ba75;
     --primary-brown: #8a7355;
     --font: 'Open Sans', sans-serif;
-  }
+}
 
 .landing-background-image {
     background: url('./images/shutterstock_568543210.png') rgba(0, 0, 0, 0.3);
