@@ -18,14 +18,15 @@
       <div class="mx-auto col-10 col-md-8 col-lg-6">
         <form class="form-box" action="" method="post">
           <div class="form-group">
-            <h1>Login</h1>
+            <h1>Sign Up</h1>
             <label for="email_name"><strong>Email</strong></label>
             <input type="text" name="email-name" placeholder="Enter Email" required>
-            <label for="password"><strong>Password</strong></label>
+            <label for="password"><strong>Choose a password</strong></label>
+            <h5>*Password must be between 8 and 15 alpha-numeric characters*</h5>
             <input type="password" name="password" placeholder="Enter Password" required>
+            <label for="password"><strong>Re-enter password</strong></label>
+            <input type="password" name="password" placeholder="Verify Password" required>
             <button type="submit" class="btn">Login</button>
-            <label for="new_user"><strong>New User?</strong></label>
-            <button type="submit" class="btn" onclick="location.href='signup.html'">Sign-Up</button>
           </div>
         </form>
       </div>
