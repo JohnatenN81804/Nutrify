@@ -20,4 +20,10 @@ router.get('/login', (req, res) => {
   res.sendFile(indexPath);
 });
 
+// send the recipe box page
+router.get('/recipebox', (req, res) => {
+  const indexPath = path.join(__dirname, '../public/recipebox.html');
+  res.sendFile(indexPath);
+});
+
 module.exports = router;
