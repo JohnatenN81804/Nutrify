@@ -8,6 +8,11 @@ body {
     --font: 'Open Sans', sans-serif;
   }
 
+.navbar {
+    background-color: #75ba75;
+}
+
+
 .landing-background-image {
     background: url('./images/shutterstock_568543210.png') rgba(0, 0, 0, 0.3);
     background-blend-mode: multiply;
@@ -20,4 +25,10 @@ body {
 .recipebox-title {
     background-color: gray;
     border-radius: 12px;
+}
+
+.footer {
+    background-color: #75ba75;
+    font-family: 'Pridi', serif;
+    font-size: 24px;
 }
