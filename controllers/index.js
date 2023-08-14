@@ -21,12 +21,12 @@ router.get('/login', (req, res) => {
   res.sendFile(indexPath);
 });
 
-// send the recipe box page
-router.get('/recipebox', (req, res) => {
-  const indexPath = path.join(__dirname, '../public/recipebox.html');
-  res.sendFile(indexPath);
-});
-
+// render homepage via handlebars
 router.use('/', homeRoutes);
+
+// render recipebox page via handlebars
+router.use('/recipebox', (req, res) => {
+  res.render('recipebox');
+});
 
 module.exports = router;
