@@ -9,4 +9,6 @@ async function fetchRecipe(searchQuery) {
   console.log(searchData);
 }
 
+
 fetchRecipe("tacos");
+
