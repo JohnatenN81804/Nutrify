@@ -1,0 +1,76 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*header {
+font-family: 'Mochiy Pop One', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Pridi', serif;
+}*/
+header {
+  font-family: 'Pridi', serif;
+  text-align: center;
+  font-size: 56px;
+  background-color: #75ba75;
+}
+body {
+  height: 100%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("../public/assets/images/shutterstock_568543210.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1400px;
+  height: 100vh;
+  position: relative;
+  display: center;
+  align-items: center;
+}
+.form-box {
+  display: center;
+  align-items: center;
+  position: center;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 30px;
+  max-width: 350px;
+  background-color: white;
+  display: center;
+  justify-content: center;
+  align-items: center;
+}
+.form-box h2 {
+  margin-bottom: 15px;
+}
+.form-box h5 {
+  font-size: 11px;
+}
+.form-box label {
+  margin-bottom: 10px;
+}
+input[type=text], input[type=password]{
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: none;
+  outline: none;
+  background-color: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus{
+  background-color: #ddd;
+}
+.btn {
+  background: #ff7c15;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 15px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+.btn:hover {
+  background-color: #75ba75;
+}
