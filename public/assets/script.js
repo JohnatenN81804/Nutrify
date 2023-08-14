@@ -9,6 +9,7 @@ async function fetchRecipe(searchQuery) {
   console.log(searchData);
 }
 
+
 fetchRecipe("tacos");
 
 const users = []
@@ -39,3 +40,4 @@ function handleSignUp(event) {
 }
 
 document.getElementById('signUp').addEventListener('click', handleSignUp);
+
