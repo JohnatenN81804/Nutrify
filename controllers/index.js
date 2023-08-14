@@ -14,5 +14,10 @@ router.get('/', (req, res) => {
   res.sendFile(indexPath);
 });
 
+// send the static index homepage file to client browser
+router.get('/login', (req, res) => {
+  const indexPath = path.join(__dirname, '../public/login.html');
+  res.sendFile(indexPath);
+});
 
 module.exports = router;
