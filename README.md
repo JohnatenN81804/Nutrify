@@ -70,3 +70,11 @@ hi
 
 ## Day 2 Landing page skeleton
 ![Alt text](image.png)
+
+
+
+
+## Day 3
+
+- 
+
