@@ -1,5 +1,10 @@
-body {
+.background-image {
     background: url('./images/shutterstock_568543210.png');
+}
+
+.background-blur-image {
+    background: url('./images/shutterstock_568543210.png');
+    backdrop-filter: blur(3px);
 }
 
 :root {
@@ -27,6 +32,56 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.search {
+    margin-top: 30px;
+}
+
+.blur-border {
+    border-bottom: 4px solid var(--primary-green);
+}
+
+.search-btn {
+    background-color: var(--primary-green);
+    border: none;
+}
+
+.search-btn:hover {
+    background-color: var(--primary-brown);
+}
+
+.search-btn:focus {
+    border-color: green;
+    box-shadow: 0 0 0 0.25rem rgba(0, 128, 0, 0.25);
+}
+
+.form-control:focus {
+    border-color: green;
+    box-shadow: 0 0 0 0.25rem rgba(0, 128, 0, 0.25);
+}
+
+.card {
+    margin: 12px;
+    box-shadow: 1px 4px 14px -8px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 1px 4px 14px -8px rgba(0,0,0,0.6);
+    -moz-box-shadow: 1px 4px 14px -8px rgba(0,0,0,0.6);
+}
+
+.card-text {
+    font-size: 14px;
+    margin: 2px;
+}
+
+.health-labels {
+    font-size: 12px;
+    list-style-type: square;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.health-labels li {
+    color: black;
 }
 
 .recipebox-title {

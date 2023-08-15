@@ -15,6 +15,7 @@ header {
   font-size: 56px;
   background-color: #75ba75;
 }
+
 body {
   height: 100%;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -28,6 +29,7 @@ body {
   display: center;
   align-items: center;
 }
+
 .form-box {
   display: center;
   align-items: center;
