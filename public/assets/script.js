@@ -63,25 +63,3 @@ function handleLogin(event) {
 }
 
  document.getElementById('login').addEventListener('click', handleLogin);
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Handle search from homepage
-
-const searchBtn = $(`.search-btn`);
-
-// when search button is clicked, send input
-searchBtn.on('click', () => {
-  const searchInput = $(`.search-box`).val();
-
-  // check to see if search box contains any input
-  if (searchInput !== '') {
-    const searchQuery = searchInput;
-    // call fetch() method: post here..
-    // then express server will get that POST request with the search query and render the handlebars search page.
-    // any client-side logic browser for the search page results will then be on the /assets/search.js file.
-    // send "searchQuery" to express via the POST fetch() call.
-    console.log(searchQuery);
-  } else {
-    console.log(`\ninvalid search query (null)`);
-  }
-});

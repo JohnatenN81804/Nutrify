@@ -29,6 +29,14 @@ body {
     background-size: cover;
 }
 
+.search {
+    margin-top: 30px;
+}
+
+.card {
+    margin: 12px;
+}
+
 .recipebox-title {
     background-color: gray;
     border-radius: 12px;
