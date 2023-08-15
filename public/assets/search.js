@@ -33,6 +33,14 @@ function renderResults(searchData) {
                     <div class="card-body">
                       <h6 class="card-title">${result.recipe.label}</h6>
                       <p class="card-text">${result.recipe.cuisineType[0]}</p>
+                      <p class="card-text">Calories: <span style="font-family:monospace">${parseInt(result.recipe.calories)}</span></p>
+                      <ul class="health-labels mt-2"> 
+                        <li>${result.recipe.healthLabels[0]}</li>
+                        <li>${result.recipe.healthLabels[1]}</li>
+                        <li>${result.recipe.healthLabels[2]}</li>
+                        <li>${result.recipe.healthLabels[3]}</li>
+                      </ul>
+                      <p class="card-text">Number of ingredients: <span style="font-size: 16px">${result.recipe.ingredients.length}</span></p>
                     </div>
                     <div class="card-footer">
                       <button class="btn btn-success" style="width:100%">View Recipe</button>
