@@ -1,16 +1,4 @@
 // script.js
-const apiRootUrl = 'https://api.edamam.com/api/recipes/v2?type=public&app_id=19533129&app_key=99f99420f7ca835f437b3ab67e21166e';
-
-async function fetchRecipe(searchQuery) {
-  const apiSearchUrl = `${apiRootUrl}&q=${searchQuery}`;
-  const searchResponse = await fetch(apiSearchUrl);
-
-  const searchData = await searchResponse.json();
-  console.log(searchData);
-}
-
-
-fetchRecipe("tacos");
 
 const users = []
 
@@ -45,7 +33,7 @@ function handleSignUp(event) {
   location.href = 'login.html';
 }
 
-document.getElementById('signUp').addEventListener('click', handleSignUp);
+// document.getElementById('signUp').addEventListener('click', handleSignUp);
 
 // Function to handle the login process
 function handleLogin(event) {
@@ -74,5 +62,26 @@ function handleLogin(event) {
   }
 }
 
-document.getElementById('login').addEventListener('click', handleLogin);
+// document.getElementById('login').addEventListener('click', handleLogin);
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Handle search from homepage
+
+const searchBtn = $(`.search-btn`);
+
+// when search button is clicked, send input
+searchBtn.on('click', () => {
+  const searchInput = $(`.search-box`).val();
+
+  // check to see if search box contains any input
+  if (searchInput !== '') {
+    const searchQuery = searchInput;
+    // call fetch() method: post here..
+    // then express server will get that POST request with the search query and render the handlebars search page.
+    // any client-side logic browser for the search page results will then be on the /assets/search.js file.
+    // send "searchQuery" to express via the POST fetch() call.
+    console.log(searchQuery);
+  } else {
+    console.log(`\ninvalid search query (null)`);
+  }
+});
