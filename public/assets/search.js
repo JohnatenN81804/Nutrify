@@ -26,24 +26,37 @@ function renderResults(searchData) {
     let card = `<div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 align-self-end">
                   <div class="card mt-2">
                     <div class="card-header text-center">
-                      <a href="${result.recipe.url}" target="_blank">
-                      <img class="card-img-top img-fluid" src="${result.recipe.images.SMALL.url}"/>
+                      <a href="${result.recipe.shareAs}" target="_blank">
+                      <img class="card-img-top img-fluid food-pic" src="${result.recipe.images.SMALL.url}"/>
                       </a>
                     </div>
                     <div class="card-body">
                       <h6 class="card-title">${result.recipe.label}</h6>
                       <p class="card-text">${result.recipe.cuisineType[0]}</p>
                       <p class="card-text">Calories: <span style="font-family:monospace">${parseInt(result.recipe.calories)}</span></p>
+                      <p class="card-text">Number of ingredients: <span style="font-size: 16px">${result.recipe.ingredients.length}</span></p>
                       <ul class="health-labels mt-2"> 
                         <li>${result.recipe.healthLabels[0]}</li>
                         <li>${result.recipe.healthLabels[1]}</li>
                         <li>${result.recipe.healthLabels[2]}</li>
                         <li>${result.recipe.healthLabels[3]}</li>
                       </ul>
-                      <p class="card-text">Number of ingredients: <span style="font-size: 16px">${result.recipe.ingredients.length}</span></p>
+                      <br/>
+                      <div class="nutrition-container">
+                        <p class="card-text"><strong>Nutrition Details</strong></p>
+                        <ul class="nutrition-info">
+                          <li>Calcium: ${result.recipe.totalDaily.CA.quantity.toFixed(1)}</li>
+                          <li>Carbs: ${result.recipe.totalDaily.CHOCDF.quantity.toFixed(1)}</li>
+                          <li>Cholesterol: ${result.recipe.totalDaily.CHOLE.quantity.toFixed(1)}</li>
+                          <li>Energy (K-cal): ${result.recipe.totalDaily.ENERC_KCAL.quantity.toFixed(1)}</li>
+                          <li>Saturated: ${result.recipe.totalDaily.FASAT.quantity.toFixed(1)}</li>
+                          <li>Fat: ${result.recipe.totalDaily.FAT.quantity.toFixed(1)}</li>
+                          <li>Iron: ${result.recipe.totalDaily.FE.quantity.toFixed(1)}</li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="card-footer">
-                      <button class="btn btn-success" style="width:100%">View Recipe</button>
+                      <button class="btn btn-success view-nutrition" style="width:100%">View Nutrition Information</button>
                       <button class="btn btn-success mt-1" style="width:100%">Add to Recipe Book</button>
                     </div>
                   </div>
@@ -51,6 +64,14 @@ function renderResults(searchData) {
     
     resultCards.append(card);
   }
+
+  // event listener to show nutrition details on the search result card
+  $('.view-nutrition').on('click', function () {
+    const card = $(this).closest('.card');
+    const nutritionContainer = card.children('.card-body').children('.nutrition-container');
+    
+    nutritionContainer.toggle();
+  });
 }
 
 // when search button is clicked, send input
