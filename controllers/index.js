@@ -26,7 +26,15 @@ router.use('/', homeRoutes);
 
 // render recipebox page via handlebars
 router.use('/recipebox', (req, res) => {
-  res.render('recipebox');
+  res.render('recipebook');
+});
+
+// render search results page via handlebars
+router.use('/search', (req, res) => {
+  // the input of the search result from the user should be able to be accessed from the request..
+  // .. like req.param.search
+  // then trigger function(s) with input(s) as argument(s) before running handlebars render for the page.
+  res.render('searchResults');
 });
 
 module.exports = router;
