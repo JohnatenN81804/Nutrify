@@ -5,17 +5,24 @@ body {
 :root {
     --primary-green: #75ba75;
     --primary-brown: #8a7355;
-    --font: 'Open Sans', sans-serif;
+    
 }
 
 .navbar {
     background-color: #75ba75;
+    font-family: 'Pridi',serif;
+    font-size: 24px;
+}
+
+.navbar-brand {
+    font-size: 48px;
+    margin-left: 80px;
 }
 
 
 .landing-background-image {
-    background: url('./images/shutterstock_568543210.png') rgba(0, 0, 0, 0.3);
-    background-blend-mode: multiply;
+    background: url('./images/shutterstock_568543210.png');
+    background-blend-mode: normal;
 
     background-position: center;
     background-repeat: no-repeat;
@@ -27,8 +34,9 @@ body {
     border-radius: 12px;
 }
 
-.footer {
+.footer{
     background-color: #75ba75;
     font-family: 'Pridi', serif;
-    font-size: 24px;
+    font-size: 22px;
+    color: white;
 }
