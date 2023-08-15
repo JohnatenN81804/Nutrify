@@ -29,11 +29,11 @@ function handleSignUp(event) {
 
   alert('Sign-up successful! You can now log in with your credentials.');
   
-  // Redirect to login page after successful sign-up
+ 
   location.href = 'login.html';
 }
 
-// document.getElementById('signUp').addEventListener('click', handleSignUp);
+document.getElementById('signUp').addEventListener('click', handleSignUp);
 
 // Function to handle the login process
 function handleLogin(event) {
@@ -55,14 +55,14 @@ function handleLogin(event) {
     alert ("Login succesful!")
 
     // Redirect the user to the main page if succesful login
-
+    //////////////////////NEED A HANDLE BAR LOCATION TO BRING LOGGIN USER TO LANDING PAGE!
     location.href = 'index.html'; 
 } else {
     alert ("Login failed! Please try again with correct credentials")
   }
 }
 
-// document.getElementById('login').addEventListener('click', handleLogin);
+ document.getElementById('login').addEventListener('click', handleLogin);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Handle search from homepage
