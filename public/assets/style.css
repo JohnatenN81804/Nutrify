@@ -73,7 +73,23 @@
     margin: 2px;
 }
 
+.food-pic {
+    border-radius: 2px;
+}
+
+.food-pic:hover {
+    filter: brightness(0.7);
+}
+
 .health-labels {
+    font-size: 12px;
+    list-style-type: square;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.nutrition-container {
+    display: none;
     font-size: 12px;
     list-style-type: square;
     background-color: #f0f0f0;
