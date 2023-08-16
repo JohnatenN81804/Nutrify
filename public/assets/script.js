@@ -26,17 +26,19 @@ function handleSignUp(event) {
 
   const user = { email, password };
   ////////////user sign-up post request
-  fetch('/user/register', {
+  fetch('/api/user/register', {
     method: 'POST',
+
+    body: JSON.stringify(user),
     headers: {
       'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(user),
-  })
+    }
+  }
+  )
     .then(response => response.json())
     .then(data => {
       alert(data.message);
-      location.href = 'login.html';
+      location.href = '/login';
     })
     .catch(error => {
       console.error(error);
