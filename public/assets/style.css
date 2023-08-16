@@ -40,6 +40,7 @@
 
 .blur-border {
     border-bottom: 4px solid var(--primary-green);
+    box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.4);
 }
 
 .search-btn {
@@ -105,9 +106,23 @@
     border-radius: 12px;
 }
 
-.footer{
+.footer {
     background-color: #75ba75;
     font-family: 'Pridi', serif;
     font-size: 22px;
     color: white;
+}
+
+.content-wrapper {
+    min-height: calc(100vh - 88px); /* Adjust the value based on your footer's height */
+    padding-bottom: 88px; /* Adjust the value to match the footer's height */
+    box-sizing: border-box;
+}
+
+.footer-search {
+    background-color: #75ba75;
+    font-family: 'Pridi', serif;
+    font-size: 22px;
+    color: white;
+    position: relative;
 }
