@@ -52,6 +52,24 @@ function renderResults(searchData) {
                           <li>Saturated: ${result.recipe.totalDaily.FASAT.quantity.toFixed(1)}</li>
                           <li>Fat: ${result.recipe.totalDaily.FAT.quantity.toFixed(1)}</li>
                           <li>Iron: ${result.recipe.totalDaily.FE.quantity.toFixed(1)}</li>
+                          <li>Fiber: ${result.recipe.totalDaily.FIBTG.quantity.toFixed(1)}</li>
+                          <li>Folate equivalent (total): ${result.recipe.totalDaily.FOLDFE.quantity.toFixed(1)}</li>
+                          <li>Potassium: ${result.recipe.totalDaily.K.quantity.toFixed(1)}</li>
+                          <li>Magnesium: ${result.recipe.totalDaily.MG.quantity.toFixed(1)}</li>
+                          <li>Sodium: ${result.recipe.totalDaily.NA.quantity.toFixed(1)}</li>
+                          <li>Niacin: ${result.recipe.totalDaily.NIA.quantity.toFixed(1)}</li>
+                          <li>Phosphorus: ${result.recipe.totalDaily.P.quantity.toFixed(1)}</li>
+                          <li>Protein: ${result.recipe.totalDaily.PROCNT.quantity.toFixed(1)}</li>
+                          <li>Riboflavin (B2): ${result.recipe.totalDaily.RIBF.quantity.toFixed(1)}</li>
+                          <li>Thiamin (B1): ${result.recipe.totalDaily.THIA.quantity.toFixed(1)}</li>
+                          <li>Vitamin E: ${result.recipe.totalDaily.TOCPHA.quantity.toFixed(1)}</li>
+                          <li>Vitamin A: ${result.recipe.totalDaily.VITA_RAE.quantity.toFixed(1)}</li>
+                          <li>Vitamin B6: ${result.recipe.totalDaily.VITB6A.quantity.toFixed(1)}</li>
+                          <li>Vitamin B12: ${result.recipe.totalDaily.VITB12.quantity.toFixed(1)}</li>
+                          <li>Vitamin C: ${result.recipe.totalDaily.VITC.quantity.toFixed(1)}</li>
+                          <li>Vitamin D: ${result.recipe.totalDaily.VITD.quantity.toFixed(1)}</li>
+                          <li>Vitamin K: ${result.recipe.totalDaily.VITK1.quantity.toFixed(1)}</li>
+                          <li>Zinc: ${result.recipe.totalDaily.ZN.quantity.toFixed(1)}</li>
                         </ul>
                       </div>
                     </div>
