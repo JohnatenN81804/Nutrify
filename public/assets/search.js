@@ -23,6 +23,12 @@ function renderResults(searchData) {
   resultCards.html(``);
 
   for (result of searchData.hits) { // result.recipe
+
+    let ingredientList = result.recipe.ingredients;
+    console.log(ingredientList);
+
+    let ingredients = ingredientList.map(item => `<li>${item.food}</li>`).join('');
+
     let card = `<div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 align-self-end">
                   <div class="card mt-2">
                     <div class="card-header text-center">
@@ -35,14 +41,7 @@ function renderResults(searchData) {
                       <p class="card-text">${result.recipe.cuisineType[0]}</p>
                       <p class="card-text">Calories: <span style="font-family:monospace">${parseInt(result.recipe.calories)}</span></p>
                       <p class="card-text">Number of ingredients: <span style="font-size: 16px">${result.recipe.ingredients.length}</span></p>
-                      <ul class="health-labels mt-2"> 
-                        <li>${result.recipe.healthLabels[0]}</li>
-                        <li>${result.recipe.healthLabels[1]}</li>
-                        <li>${result.recipe.healthLabels[2]}</li>
-                        <li>${result.recipe.healthLabels[3]}</li>
-                      </ul>
-                      <br/>
-                      <div class="nutrition-container">
+                      <div class="information-container" id="nutrition-container">
                         <p class="card-text"><strong>Nutrition Details</strong></p>
                         <ul class="nutrition-info">
                           <li>Calcium: ${result.recipe.totalDaily.CA.quantity.toFixed(1)}</li>
@@ -72,10 +71,19 @@ function renderResults(searchData) {
                           <li>Zinc: ${result.recipe.totalDaily.ZN.quantity.toFixed(1)}</li>
                         </ul>
                       </div>
+                      <div class="information-container" id="ingredients-container">
+                      <p class="card-text"><strong>Ingredients</strong></p>
+                      <p class="ingredient-info">
+                        <ul>
+                          ${ingredients}
+                        </ul>
+                      </p>
+                      </div>
                     </div>
                     <div class="card-footer">
-                      <button class="btn btn-success view-nutrition" style="width:100%">View Nutrition Information</button>
-                      <button class="btn btn-success mt-1" style="width:100%">Add to Recipe Book</button>
+                      <button class="btn btn-success btn-green view-ingredients" style="width:100%">View Ingredients</button>
+                      <button class="btn btn-success btn-green view-nutrition mt-1" style="width:100%">View Nutrition Information</button>
+                      <button class="btn btn-primary btn-add-recipe mt-1" style="width:100%">Add to Recipe Book</button>
                     </div>
                   </div>
                 </div>`
@@ -86,11 +94,18 @@ function renderResults(searchData) {
   // event listener to show nutrition details on the search result card
   $('.view-nutrition').on('click', function () {
     const card = $(this).closest('.card');
-    const nutritionContainer = card.children('.card-body').children('.nutrition-container');
+    const nutritionContainer = card.children('.card-body').children('#nutrition-container');
     
     nutritionContainer.toggle();
   });
-}
+
+  $('.view-ingredients').on('click', function () {
+    const card = $(this).closest('.card');
+    const ingredientsContainer = card.children('.card-body').children('#ingredients-container');
+    
+    ingredientsContainer.toggle();
+  });
+};
 
 // when search button is clicked, send input
 searchBtn.on('click', () => {
