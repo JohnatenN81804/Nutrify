@@ -2,26 +2,28 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
-const authenticateUser = require('../middleware/authenticateUser');
-const { User } = require("../models/define")
+const authenticateUser = require('../../middleware/authenticateUser');
+const { User } = require("../../models/define")
 
 // Register for the app
 router.post('/register', async (req, res) => {
+  console.log("here")
   try {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
 
     const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = await User.create({
-      username: username,
-      password: hashedPassword
+      email: email,
+      password_hash: hashedPassword
     });
 
     if (!newUser) {
-      return res.status(400).json({ message: 'User already exists' });
+      res.status(400).json({ message: 'User already exists' });
+    } else {
+      res.status(201).json({ message: 'User registered successfully' });
     }
-
-    res.status(201).json({ message: 'User registered successfully' });
   } catch (error) {
+    console.log(error)
     res.status(500).json({ message: 'An error occurred' });
   }
 });

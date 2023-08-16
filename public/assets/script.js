@@ -1,9 +1,8 @@
 
 
-
 // script.js
 
-const users = []
+const user = []
 
 function handleSignUp(event) {
   event.preventDefault(); // Prevent the form from submitting
@@ -23,19 +22,23 @@ function handleSignUp(event) {
     return;
   }
 
+  console.log('User sign-up request:', email);
+
   const user = { email, password };
   ////////////user sign-up post request
-  fetch('/register', {
+  fetch('/api/user/register', {
     method: 'POST',
+
+    body: JSON.stringify(user),
     headers: {
       'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(user),
-  })
+    }
+  }
+  )
     .then(response => response.json())
     .then(data => {
       alert(data.message);
-      location.href = 'login.html';
+      location.href = '/login';
     })
     .catch(error => {
       console.error(error);
@@ -45,7 +48,6 @@ function handleSignUp(event) {
 
 document.getElementById('signUp').addEventListener('click', handleSignUp)
 
-// Function to handle the login process
 function handleLogin(event) {
   event.preventDefault();
 
@@ -76,10 +78,8 @@ function handleLogin(event) {
     });
 }
 
-
-
-
 document.getElementById('login').addEventListener('click', handleLogin);
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Handle search from homepage

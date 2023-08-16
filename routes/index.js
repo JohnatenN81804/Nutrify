@@ -8,6 +8,10 @@ const router = express.Router();
 // Use API routes if applicable
 // router.use('/api', apiRoutes);
 
+
+
+
+
 // Serve index.html using a GET route
 router.get('/', (req, res) => {
   const indexPath = path.join(__dirname, '../public/index.html');

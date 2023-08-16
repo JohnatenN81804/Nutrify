@@ -22,7 +22,7 @@ const RecipeIngredients = sequelize.define('RecipeIngredients', {
 });
 
 // Define the User model
-const User = sequelize.define('User', {
+const User = sequelize.define('user', {
   user_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
