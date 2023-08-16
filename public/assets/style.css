@@ -10,7 +10,8 @@
 :root {
     --primary-green: #75ba75;
     --primary-brown: #8a7355;
-    
+    --dark-green: #4c8e4c;
+    --dark-brown: #604d3b;
 }
 
 .navbar {
@@ -32,6 +33,15 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.btn-green {
+    background-color: var(--primary-green);
+    border: none;
+}
+
+.btn-green:hover {
+    background-color: var(--dark-green);
 }
 
 .search {
@@ -89,12 +99,28 @@
     border-radius: 8px;
 }
 
-.nutrition-container {
-    display: none;
+.information-container {
     font-size: 12px;
     list-style-type: square;
     background-color: #f0f0f0;
     border-radius: 8px;
+}
+
+#nutrition-container {
+    display: none;
+}
+
+#ingredients-container {
+    display: none;
+}
+
+.btn-add-recipe {
+    background-color: var(--primary-brown);
+    border: none;
+}
+
+.btn-add-recipe:hover {
+    background-color: var(--dark-brown);
 }
 
 .health-labels li {
