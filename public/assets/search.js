@@ -107,11 +107,37 @@ function renderResults(searchData) {
 
   $('.btn-add-recipe').on('click', function() {
     const card = $(this).closest('.card');
-    const recipeName = card.children('.card-body').children('#recipe-name');
-    const cuisineType = card.children('.card-body').children('#cuisine-type');
-    const calories = card.children('.card-body').children('#calories');
-    const numberOfIngredients = card.children('.card-body').children('#number-of-ingredients');
+    const recipeName = card.find('#recipe-name').text();
+    const cuisineType = card.find('#cuisine-type').text();
+    const calories = card.find('#calories span').text();
+    const numberOfIngredients = card.find('#number-of-ingredients span').text();
     
+    const nutritionList = card.find('#nutrition-container ul li')
+      .map(function() {
+        return $(this).text();
+      })
+      .get()
+      .join('\n');
+    
+    const ingredientList = card.find('#ingredients-container ul li')
+      .map(function() {
+        return $(this).text();
+      })
+      .get()
+      .join('\n');
+  
+    console.log(`
+      Recipe Name: ${recipeName}\n
+      Cuisine Type: ${cuisineType}\n
+      Calories: ${calories}\n
+      Number of Ingredients: ${numberOfIngredients}\n
+      Nutrition Details:\n${nutritionList}\n
+      Ingredients:\n${ingredientList}
+    `);
+
+    // call function here to do something else with this data, like store it in the user's recipe box..
+    // example: function addRecipeToBox(name, type, cals, ingredientsQty, nutritionInfo, IngredientsInfo) {};
+    // ...
   })
 };
 
