@@ -1,72 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrify - Home</title>
   <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <!-- custom stylesheet -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Pacifico&family=Permanent+Marker&family=Pridi&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Pacifico&family=Permanent+Marker&family=Pridi&display=swap"
+    rel="stylesheet">
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="./assets/style.css">
-  <title>Nutrify Home Page</title>
 </head>
+
 <body class="vh-100 overflow-hidden landing-background-image">
   <header>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
-    <div class="container">
-      <a class="navbar-brand " href="#">Nutrify</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link text-black" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" href="recipebox.html">Recipes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" href="login.html">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" href="signup.html">Sign Up</a>
-          </li>
-        </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+      <div class="container">
+        <a class="navbar-brand" href="#">Nutrify</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/recipebox">Recipes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/signup">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/search">Search</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
   </header>
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container ">
-      <div class="row justify-content-center text-center text-black ">
-        <div class="col-lg-6 ">
-          <h1>Welcome</h1>
-          <p>Search trusted nutritional database for detailed food info. Find calories, macros, vitamins, and more! Make informed choices for a healthier you.</p>
-            <input type="text" class="form-control" placeholder="Search Foods ...">
-            <button type="submit" class="text-white bg-success">Submit</button>
+    <div class="container text-center text-black">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <h1 class="display-4">Welcome to Nutrify</h1>
+          <p class="lead">Search a trusted nutritional database for detailed food information. Find calories, macros,
+            vitamins, and more! Make informed choices for a healthier you.</p>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="content py-5">
+    <div class="container text-center">
+      <h2 class="display-4 mb-4">How Nutrify Can Help You</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <img id="picture1"      src="./assets/images/tacostest.JPG" alt="Icon 1" class="img-fluid mb-3 larger-image">
+          <h4 class="mb-3">Access to Nutritional Information</h4>
+          <p>Explore a vast database of foods and their nutritional content to make informed choices for your diet.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="./assets/images/nutrition_details..JPG" alt="Icon 2" class="img-fluid mb-3 larger-image">
+          <h4 class="mb-3">Track Your Daily Intake</h4>
+          <p>Log your daily meals to monitor your calorie intake, macronutrients, and achieve your nutritional goals.
+          </p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="./assets/images/recipes.JPG" alt="Icon 3" class="img-fluid mb-3 larger-image">
+          <h4 class="mb-3">Discover Healthy Recipes</h4>
+          <p>Explore a variety of delicious and healthy recipes to keep your meals exciting and nutritious.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-<footer class="footer text-white text-center py-3 fixed-bottom">
-<div class="container">
-  <p>Be strong. Be healthy. Be happy.</p>
-</div>
-</footer>
-</section>
-  <!-- JQuery 3.x -->
-  <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
-  <!-- Bootsrap 5 JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+  <footer class="footer text-white text-center py-3 fixed-bottom">
+    <div class="container">
+      <p class="mb-0">Be strong. Be healthy. Be happy.</p>
+    </div>
+  </footer>
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+    integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
   <script src="./assets/script.js"></script>
 </body>
+
 </html>
