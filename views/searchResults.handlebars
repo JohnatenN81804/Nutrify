@@ -1,7 +1,16 @@
-<div class="container d-flex justify-content-center">
-  <h1 class="mt-5">Search Results</h1>
+<div class="container-fluid justify-content-center">
+  <div class="d-flex justify-content-center search">
+    <div class="d-flex flex-nowrap">
+      <input type="text" class="form-control search-box" placeholder="Search Recipes ...">
+      <button type="submit" class="btn btn-success search-btn" id="searchBtn">Search</button>
+    </div>
+  </div>
+  <div class="container results">
+    <div class="row row-cols-auto justify-content-center mt-2" id="result-cards">
+    </div>
+  </div>
+  <div class="blur-border mt-4"></div>
 </div>
-
   <!-- JQuery 3.x -->
   <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
   <!-- Bootsrap 5 JS-->

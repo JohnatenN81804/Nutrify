@@ -78,6 +78,7 @@ function handleLogin(event) {
 
 
 
+
 document.getElementById('login').addEventListener('click', handleLogin);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -101,3 +102,4 @@ searchBtn.on('click', () => {
     console.log(`\ninvalid search query (null)`);
   }
 });
+
