@@ -10,7 +10,8 @@
 :root {
     --primary-green: #75ba75;
     --primary-brown: #8a7355;
-    
+    --dark-green: #4c8e4c;
+    --dark-brown: #604d3b;
 }
 
 .navbar {
@@ -34,12 +35,22 @@
     background-size: cover;
 }
 
+.btn-green {
+    background-color: var(--primary-green);
+    border: none;
+}
+
+.btn-green:hover {
+    background-color: var(--dark-green);
+}
+
 .search {
     margin-top: 30px;
 }
 
 .blur-border {
     border-bottom: 4px solid var(--primary-green);
+    box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.4);
 }
 
 .search-btn {
@@ -88,12 +99,28 @@
     border-radius: 8px;
 }
 
-.nutrition-container {
-    display: none;
+.information-container {
     font-size: 12px;
     list-style-type: square;
     background-color: #f0f0f0;
     border-radius: 8px;
+}
+
+#nutrition-container {
+    display: none;
+}
+
+#ingredients-container {
+    display: none;
+}
+
+.btn-add-recipe {
+    background-color: var(--primary-brown);
+    border: none;
+}
+
+.btn-add-recipe:hover {
+    background-color: var(--dark-brown);
 }
 
 .health-labels li {
@@ -105,9 +132,23 @@
     border-radius: 12px;
 }
 
-.footer{
+.footer {
     background-color: #75ba75;
     font-family: 'Pridi', serif;
     font-size: 22px;
     color: white;
+}
+
+.content-wrapper {
+    min-height: calc(100vh - 88px); /* Adjust the value based on your footer's height */
+    padding-bottom: 88px; /* Adjust the value to match the footer's height */
+    box-sizing: border-box;
+}
+
+.footer-search {
+    background-color: #75ba75;
+    font-family: 'Pridi', serif;
+    font-size: 22px;
+    color: white;
+    position: relative;
 }
