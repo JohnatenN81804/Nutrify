@@ -29,6 +29,12 @@ router.post('/register', async (req, res) => {
   }
 });
 
+app.use((err, req, res, next) => {
+  console.error('Error:', err);
+  res.status(500).json({ message: 'An internal server error occurred.' });
+});
+
+
 // User login route
 router.post('/login', async (req, res) => {
   try {
@@ -52,5 +58,9 @@ router.post('/login', async (req, res) => {
     return res.status(500).json({ message: 'Error occurred' });
   }
 });
+
+
+
+
 
 module.exports = router;
