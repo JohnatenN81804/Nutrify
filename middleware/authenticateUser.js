@@ -46,9 +46,6 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ message: 'Authentication failed' });
     }
 
-    // Set up a session or token as needed
-    // For example, create a session: req.session.user = { userId: user.id, email: user.email };
-
     return res.status(200).json({ message: 'Authentication successful' });
   } catch (error) {
     console.error(error);
