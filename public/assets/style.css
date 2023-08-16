@@ -40,6 +40,7 @@
 
 .blur-border {
     border-bottom: 4px solid var(--primary-green);
+    box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.4);
 }
 
 .search-btn {
