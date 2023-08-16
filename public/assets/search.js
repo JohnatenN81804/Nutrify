@@ -22,12 +22,11 @@ function renderResults(searchData) {
 
   resultCards.html(``);
 
-  for (result of searchData.hits) { // result.recipe
+  for (result of searchData.hits) {
 
-    let ingredientList = result.recipe.ingredients;
-    console.log(ingredientList);
-
-    let ingredients = ingredientList.map(item => `<li>${item.food}</li>`).join('');
+    const nutrients = result.recipe.totalDaily;
+    let ingredients = result.recipe.ingredients; // ingredients.food for title and ingredients.text for description
+    let ingredientsList = ingredients.map(item => `<li>${item.text}</li>`).join('');
 
     let card = `<div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 align-self-end">
                   <div class="card mt-2">
@@ -37,45 +36,45 @@ function renderResults(searchData) {
                       </a>
                     </div>
                     <div class="card-body">
-                      <h6 class="card-title">${result.recipe.label}</h6>
-                      <p class="card-text">${result.recipe.cuisineType[0]}</p>
-                      <p class="card-text">Calories: <span style="font-family:monospace">${parseInt(result.recipe.calories)}</span></p>
-                      <p class="card-text">Number of ingredients: <span style="font-size: 16px">${result.recipe.ingredients.length}</span></p>
+                      <h6 class="card-title" id="recipe-name">${result.recipe.label}</h6>
+                      <p class="card-text" id="cuisine-type">${result.recipe.cuisineType[0]}</p>
+                      <p class="card-text" id="calories">Calories: <span style="font-family:monospace">${parseInt(result.recipe.calories)}</span></p>
+                      <p class="card-text" id="number-of-ingredients">Number of ingredients: <span style="font-size: 16px">${result.recipe.ingredients.length}</span></p>
                       <div class="information-container" id="nutrition-container">
                         <p class="card-text"><strong>Nutrition Details</strong></p>
                         <ul class="nutrition-info">
-                          <li>Calcium: ${result.recipe.totalDaily.CA.quantity.toFixed(1)}</li>
-                          <li>Carbs: ${result.recipe.totalDaily.CHOCDF.quantity.toFixed(1)}</li>
-                          <li>Cholesterol: ${result.recipe.totalDaily.CHOLE.quantity.toFixed(1)}</li>
-                          <li>Energy (K-cal): ${result.recipe.totalDaily.ENERC_KCAL.quantity.toFixed(1)}</li>
-                          <li>Saturated: ${result.recipe.totalDaily.FASAT.quantity.toFixed(1)}</li>
-                          <li>Fat: ${result.recipe.totalDaily.FAT.quantity.toFixed(1)}</li>
-                          <li>Iron: ${result.recipe.totalDaily.FE.quantity.toFixed(1)}</li>
-                          <li>Fiber: ${result.recipe.totalDaily.FIBTG.quantity.toFixed(1)}</li>
-                          <li>Folate equivalent (total): ${result.recipe.totalDaily.FOLDFE.quantity.toFixed(1)}</li>
-                          <li>Potassium: ${result.recipe.totalDaily.K.quantity.toFixed(1)}</li>
-                          <li>Magnesium: ${result.recipe.totalDaily.MG.quantity.toFixed(1)}</li>
-                          <li>Sodium: ${result.recipe.totalDaily.NA.quantity.toFixed(1)}</li>
-                          <li>Niacin: ${result.recipe.totalDaily.NIA.quantity.toFixed(1)}</li>
-                          <li>Phosphorus: ${result.recipe.totalDaily.P.quantity.toFixed(1)}</li>
-                          <li>Protein: ${result.recipe.totalDaily.PROCNT.quantity.toFixed(1)}</li>
-                          <li>Riboflavin (B2): ${result.recipe.totalDaily.RIBF.quantity.toFixed(1)}</li>
-                          <li>Thiamin (B1): ${result.recipe.totalDaily.THIA.quantity.toFixed(1)}</li>
-                          <li>Vitamin E: ${result.recipe.totalDaily.TOCPHA.quantity.toFixed(1)}</li>
-                          <li>Vitamin A: ${result.recipe.totalDaily.VITA_RAE.quantity.toFixed(1)}</li>
-                          <li>Vitamin B6: ${result.recipe.totalDaily.VITB6A.quantity.toFixed(1)}</li>
-                          <li>Vitamin B12: ${result.recipe.totalDaily.VITB12.quantity.toFixed(1)}</li>
-                          <li>Vitamin C: ${result.recipe.totalDaily.VITC.quantity.toFixed(1)}</li>
-                          <li>Vitamin D: ${result.recipe.totalDaily.VITD.quantity.toFixed(1)}</li>
-                          <li>Vitamin K: ${result.recipe.totalDaily.VITK1.quantity.toFixed(1)}</li>
-                          <li>Zinc: ${result.recipe.totalDaily.ZN.quantity.toFixed(1)}</li>
+                          <li>${nutrients.CA.label}: ${nutrients.CA.quantity.toFixed(1)}</li>
+                          <li>${nutrients.CHOCDF.label}: ${nutrients.CHOCDF.quantity.toFixed(1)}</li>
+                          <li>${nutrients.CHOLE.label}: ${nutrients.CHOLE.quantity.toFixed(1)}</li>
+                          <li>${nutrients.ENERC_KCAL.label}: ${nutrients.ENERC_KCAL.quantity.toFixed(1)}</li>
+                          <li>${nutrients.FASAT.label}: ${nutrients.FASAT.quantity.toFixed(1)}</li>
+                          <li>${nutrients.FAT.label}: ${nutrients.FAT.quantity.toFixed(1)}</li>
+                          <li>${nutrients.FE.label}: ${nutrients.FE.quantity.toFixed(1)}</li>
+                          <li>${nutrients.FIBTG.label}: ${nutrients.FIBTG.quantity.toFixed(1)}</li>
+                          <li>${nutrients.FOLDFE.label}: ${nutrients.FOLDFE.quantity.toFixed(1)}</li>
+                          <li>${nutrients.K.label}: ${nutrients.K.quantity.toFixed(1)}</li>
+                          <li>${nutrients.MG.label}: ${nutrients.MG.quantity.toFixed(1)}</li>
+                          <li>${nutrients.NA.label}: ${nutrients.NA.quantity.toFixed(1)}</li>
+                          <li>${nutrients.NIA.label}: ${nutrients.NIA.quantity.toFixed(1)}</li>
+                          <li>${nutrients.P.label}: ${nutrients.P.quantity.toFixed(1)}</li>
+                          <li>${nutrients.PROCNT.label}: ${nutrients.PROCNT.quantity.toFixed(1)}</li>
+                          <li>${nutrients.RIBF.label}: ${nutrients.RIBF.quantity.toFixed(1)}</li>
+                          <li>${nutrients.THIA.label}: ${nutrients.THIA.quantity.toFixed(1)}</li>
+                          <li>${nutrients.TOCPHA.label}: ${nutrients.TOCPHA.quantity.toFixed(1)}</li>
+                          <li>${nutrients.VITA_RAE.label}: ${nutrients.VITA_RAE.quantity.toFixed(1)}</li>
+                          <li>${nutrients.VITB12.label}: ${nutrients.VITB6A.quantity.toFixed(1)}</li>
+                          <li>${nutrients.VITB12.label}:: ${nutrients.VITB12.quantity.toFixed(1)}</li>
+                          <li>${nutrients.VITC.label}: ${nutrients.VITC.quantity.toFixed(1)}</li>
+                          <li>${nutrients.VITD.label}: ${nutrients.VITD.quantity.toFixed(1)}</li>
+                          <li>${nutrients.VITK1.label}: ${nutrients.VITK1.quantity.toFixed(1)}</li>
+                          <li>${nutrients.ZN.label}: ${nutrients.ZN.quantity.toFixed(1)}</li>
                         </ul>
                       </div>
                       <div class="information-container" id="ingredients-container">
                       <p class="card-text"><strong>Ingredients</strong></p>
                       <p class="ingredient-info">
                         <ul>
-                          ${ingredients}
+                          ${ingredientsList}
                         </ul>
                       </p>
                       </div>
@@ -83,7 +82,7 @@ function renderResults(searchData) {
                     <div class="card-footer">
                       <button class="btn btn-success btn-green view-ingredients" style="width:100%">View Ingredients</button>
                       <button class="btn btn-success btn-green view-nutrition mt-1" style="width:100%">View Nutrition Information</button>
-                      <button class="btn btn-primary btn-add-recipe mt-1" style="width:100%">Add to Recipe Book</button>
+                      <button class="btn btn-primary btn-add-recipe mt-1" style="width:100%">Add to Recipe Box</button>
                     </div>
                   </div>
                 </div>`
@@ -105,6 +104,41 @@ function renderResults(searchData) {
     
     ingredientsContainer.toggle();
   });
+
+  $('.btn-add-recipe').on('click', function() {
+    const card = $(this).closest('.card');
+    const recipeName = card.find('#recipe-name').text();
+    const cuisineType = card.find('#cuisine-type').text();
+    const calories = card.find('#calories span').text();
+    const numberOfIngredients = card.find('#number-of-ingredients span').text();
+    
+    const nutritionList = card.find('#nutrition-container ul li')
+      .map(function() {
+        return $(this).text();
+      })
+      .get()
+      .join('\n');
+    
+    const ingredientList = card.find('#ingredients-container ul li')
+      .map(function() {
+        return $(this).text();
+      })
+      .get()
+      .join('\n');
+  
+    console.log(`
+      Recipe Name: ${recipeName}\n
+      Cuisine Type: ${cuisineType}\n
+      Calories: ${calories}\n
+      Number of Ingredients: ${numberOfIngredients}\n
+      Nutrition Details:\n${nutritionList}\n
+      Ingredients:\n${ingredientList}
+    `);
+
+    // call function here to do something else with this data, like store it in the user's recipe box..
+    // example: function addRecipeToBox(name, type, cals, ingredientsQty, nutritionInfo, IngredientsInfo) {};
+    // ...
+  })
 };
 
 // when search button is clicked, send input
