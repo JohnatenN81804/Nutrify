@@ -70,3 +70,9 @@ hi
 
 ## Day 2 Landing page skeleton
 ![Alt text](image.png)
+
+## Day 4 TODO
+- Make sure the bottons are working 
+- Organize Stucture of files 
+- Authorization
+-
