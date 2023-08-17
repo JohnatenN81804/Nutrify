@@ -128,10 +128,6 @@
     font-size: 14px;
 }
 
-.view-ingredients {
-    white-space: nowrap;
-}
-
 .btn-add-recipe {
     background-color: var(--primary-brown);
     border: none;
