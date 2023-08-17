@@ -12,7 +12,7 @@ if (process.env.JAWSDB_URL) {
     //process.env.DB_USER
     'root',
     //process.env.DB_USER
-    'password',
+    null,
     {
       host: 'localhost',
       dialect: 'mysql',

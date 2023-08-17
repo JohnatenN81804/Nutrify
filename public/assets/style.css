@@ -4,6 +4,7 @@
 
 .background-blur-image {
     background: url('./images/shutterstock_568543210.png');
+    background-attachment: fixed;
     backdrop-filter: blur(3px);
 }
 
@@ -18,6 +19,7 @@
     background-color: #75ba75;
     font-family: 'Pridi',serif;
     font-size: 24px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-brand {
@@ -114,17 +116,21 @@
     display: none;
 }
 
-.btn-add-recipe {
-    background-color: var(--primary-brown);
-    border: none;
-}
-
 .btn-add-recipe:hover {
     background-color: var(--dark-brown);
 }
 
 .health-labels li {
     color: black;
+}
+
+.view-nutrition, .view-ingredients, .btn-add-recipe {
+    font-size: 14px;
+}
+
+.btn-add-recipe {
+    background-color: var(--primary-brown);
+    border: none;
 }
 
 .recipebox-title {

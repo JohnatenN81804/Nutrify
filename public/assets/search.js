@@ -3,14 +3,9 @@ const searchBtn = $(`.search-btn`);
 const resultCards = $('#result-cards')
 
 async function fetchRecipe(searchQuery) {
-  // call fetch() method: post here..
-  // then express server will get that POST request with the search query and render the handlebars search page.
-  // any client-side logic browser for the search page results will then be on the /assets/search.js file.
-  // send "searchQuery" to express via the POST fetch() call.
-
   const apiSearchUrl = `${apiRootUrl}&q=${searchQuery}`;
-  const searchResponse = await fetch(apiSearchUrl);
 
+  const searchResponse = await fetch(apiSearchUrl);
   const searchData = await searchResponse.json();
   
   renderResults(searchData);
@@ -41,33 +36,33 @@ function renderResults(searchData) {
                       <p class="card-text" id="calories">Calories: <span style="font-family:monospace">${parseInt(result.recipe.calories)}</span></p>
                       <p class="card-text" id="number-of-ingredients">Number of ingredients: <span style="font-size: 16px">${result.recipe.ingredients.length}</span></p>
                       <div class="information-container" id="nutrition-container">
-                        <p class="card-text"><strong>Nutrition Details</strong></p>
+                        <p class="card-text"><strong>Nutrition Percent Daily Value</strong></p>
                         <ul class="nutrition-info">
-                          <li>${nutrients.CA.label}: ${nutrients.CA.quantity.toFixed(1)}</li>
-                          <li>${nutrients.CHOCDF.label}: ${nutrients.CHOCDF.quantity.toFixed(1)}</li>
-                          <li>${nutrients.CHOLE.label}: ${nutrients.CHOLE.quantity.toFixed(1)}</li>
-                          <li>${nutrients.ENERC_KCAL.label}: ${nutrients.ENERC_KCAL.quantity.toFixed(1)}</li>
-                          <li>${nutrients.FASAT.label}: ${nutrients.FASAT.quantity.toFixed(1)}</li>
-                          <li>${nutrients.FAT.label}: ${nutrients.FAT.quantity.toFixed(1)}</li>
-                          <li>${nutrients.FE.label}: ${nutrients.FE.quantity.toFixed(1)}</li>
-                          <li>${nutrients.FIBTG.label}: ${nutrients.FIBTG.quantity.toFixed(1)}</li>
-                          <li>${nutrients.FOLDFE.label}: ${nutrients.FOLDFE.quantity.toFixed(1)}</li>
-                          <li>${nutrients.K.label}: ${nutrients.K.quantity.toFixed(1)}</li>
-                          <li>${nutrients.MG.label}: ${nutrients.MG.quantity.toFixed(1)}</li>
-                          <li>${nutrients.NA.label}: ${nutrients.NA.quantity.toFixed(1)}</li>
-                          <li>${nutrients.NIA.label}: ${nutrients.NIA.quantity.toFixed(1)}</li>
-                          <li>${nutrients.P.label}: ${nutrients.P.quantity.toFixed(1)}</li>
-                          <li>${nutrients.PROCNT.label}: ${nutrients.PROCNT.quantity.toFixed(1)}</li>
-                          <li>${nutrients.RIBF.label}: ${nutrients.RIBF.quantity.toFixed(1)}</li>
-                          <li>${nutrients.THIA.label}: ${nutrients.THIA.quantity.toFixed(1)}</li>
-                          <li>${nutrients.TOCPHA.label}: ${nutrients.TOCPHA.quantity.toFixed(1)}</li>
-                          <li>${nutrients.VITA_RAE.label}: ${nutrients.VITA_RAE.quantity.toFixed(1)}</li>
-                          <li>${nutrients.VITB12.label}: ${nutrients.VITB6A.quantity.toFixed(1)}</li>
-                          <li>${nutrients.VITB12.label}:: ${nutrients.VITB12.quantity.toFixed(1)}</li>
-                          <li>${nutrients.VITC.label}: ${nutrients.VITC.quantity.toFixed(1)}</li>
-                          <li>${nutrients.VITD.label}: ${nutrients.VITD.quantity.toFixed(1)}</li>
-                          <li>${nutrients.VITK1.label}: ${nutrients.VITK1.quantity.toFixed(1)}</li>
-                          <li>${nutrients.ZN.label}: ${nutrients.ZN.quantity.toFixed(1)}</li>
+                          <li>${nutrients.CA.label}: ${nutrients.CA.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.CHOCDF.label}: ${nutrients.CHOCDF.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.CHOLE.label}: ${nutrients.CHOLE.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.ENERC_KCAL.label}: ${nutrients.ENERC_KCAL.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.FASAT.label}: ${nutrients.FASAT.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.FAT.label}: ${nutrients.FAT.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.FE.label}: ${nutrients.FE.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.FIBTG.label}: ${nutrients.FIBTG.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.FOLDFE.label}: ${nutrients.FOLDFE.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.K.label}: ${nutrients.K.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.MG.label}: ${nutrients.MG.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.NA.label}: ${nutrients.NA.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.NIA.label}: ${nutrients.NIA.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.P.label}: ${nutrients.P.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.PROCNT.label}: ${nutrients.PROCNT.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.RIBF.label}: ${nutrients.RIBF.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.THIA.label}: ${nutrients.THIA.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.TOCPHA.label}: ${nutrients.TOCPHA.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.VITA_RAE.label}: ${nutrients.VITA_RAE.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.VITB12.label}: ${nutrients.VITB6A.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.VITB12.label}: ${nutrients.VITB12.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.VITC.label}: ${nutrients.VITC.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.VITD.label}: ${nutrients.VITD.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.VITK1.label}: ${nutrients.VITK1.quantity.toFixed(1)} %</li>
+                          <li>${nutrients.ZN.label}: ${nutrients.ZN.quantity.toFixed(1)} %</li>
                         </ul>
                       </div>
                       <div class="information-container" id="ingredients-container">
@@ -80,9 +75,15 @@ function renderResults(searchData) {
                       </div>
                     </div>
                     <div class="card-footer">
-                      <button class="btn btn-success btn-green view-ingredients" style="width:100%">View Ingredients</button>
-                      <button class="btn btn-success btn-green view-nutrition mt-1" style="width:100%">View Nutrition Information</button>
-                      <button class="btn btn-primary btn-add-recipe mt-1" style="width:100%">Add to Recipe Box</button>
+                      <div class="row">
+                        <div class="col-6 col-sm-6 col-md-12 col-lg-12 col-xl-12 col-xxl-6 d-flex justify-content-center">
+                          <button class="mx-auto w-100 btn btn-success btn-green view-nutrition mt-1">%DV</button>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-12 col-lg-12 col-xl-12 col-xxl-6 d-flex justify-content-center">
+                          <button class="mx-auto w-100 btn btn-success btn-green view-ingredients mt-1" text-nowrap>Ingredients</button>
+                        </div>
+                      </div>
+                      <button class="w-100 btn btn-primary btn-add-recipe mt-1">Add</button>
                     </div>
                   </div>
                 </div>`
@@ -111,6 +112,8 @@ function renderResults(searchData) {
     const cuisineType = card.find('#cuisine-type').text();
     const calories = card.find('#calories span').text();
     const numberOfIngredients = card.find('#number-of-ingredients span').text();
+    const imageLink = card.find('.food-pic').attr('src');
+    const recipeLink = card.find('.food-pic').parent().attr('href');
     
     const nutritionList = card.find('#nutrition-container ul li')
       .map(function() {
@@ -132,7 +135,9 @@ function renderResults(searchData) {
       Calories: ${calories}\n
       Number of Ingredients: ${numberOfIngredients}\n
       Nutrition Details:\n${nutritionList}\n
-      Ingredients:\n${ingredientList}
+      Ingredients:\n${ingredientList}\n
+      Image Link: ${imageLink}\n
+      Recipe Link: ${recipeLink}\n
     `);
 
     // call function here to do something else with this data, like store it in the user's recipe box..
