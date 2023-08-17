@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const router = express.Router();
+const authenticateUser = require('../middleware/authenticateUser');
 
 // send the static login.html file to client
 router.get('/login', (req, res) => {
@@ -20,7 +21,8 @@ router.use('/search', (req, res) => {
 });
 
 // send static recipebox.html file to client
-router.use('/recipebox', (req, res) => {
+router.use('/recipebox', authenticateUser, (req, res) => {
+
   const filePath = path.join(__dirname, '../public/recipebox.html');
   res.sendFile(filePath);
 });
