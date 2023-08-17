@@ -60,7 +60,7 @@ function handleLogin(event) {
   const user = { email, password };
 
   // Send login data to the server
-  fetch('/login', {
+  fetch('/api/user/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ function handleLogin(event) {
     .then(response => response.json())
     .then(data => {
       alert(data.message);
-      location.href = 'index.html';
+      location.href = '/search';
     })
     .catch(error => {
       console.error(error);

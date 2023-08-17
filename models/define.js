@@ -23,7 +23,7 @@ const RecipeIngredients = sequelize.define('RecipeIngredients', {
 
 // Define the User model
 const User = sequelize.define('user', {
-  user_id: {
+  id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     primaryKey: true,
@@ -37,7 +37,7 @@ const User = sequelize.define('user', {
       isEmail: true,
     },
   },
-  password_hash: {
+  password: {
     type: DataTypes.STRING(255),
     allowNull: false,
   },
