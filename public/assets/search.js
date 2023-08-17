@@ -4,7 +4,7 @@ const resultCards = $('#result-cards')
 
 async function fetchRecipe(searchQuery) {
   const apiSearchUrl = `${apiRootUrl}&q=${searchQuery}`;
-  
+
   const searchResponse = await fetch(apiSearchUrl);
   const searchData = await searchResponse.json();
   
@@ -75,9 +75,15 @@ function renderResults(searchData) {
                       </div>
                     </div>
                     <div class="card-footer">
-                      <button class="btn btn-success btn-green view-nutrition" style="width:100%">View Nutrition Information</button>
-                      <button class="btn btn-success btn-green view-ingredients mt-1" style="width:100%">View Ingredients</button>
-                      <button class="btn btn-primary btn-add-recipe mt-1" style="width:100%">Add to Recipe Box</button>
+                      <div class="row">
+                        <div class="col-6 col-sm-6 col-md-12 col-lg-12 col-xl-12 col-xxl-6 d-flex justify-content-center">
+                          <button class="mx-auto w-100 btn btn-success btn-green view-nutrition mt-1">%DV</button>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-12 col-lg-12 col-xl-12 col-xxl-6 d-flex justify-content-center">
+                          <button class="mx-auto w-100 btn btn-success btn-green view-ingredients mt-1">Ingredients</button>
+                        </div>
+                      </div>
+                      <button class="w-100 btn btn-primary btn-add-recipe mt-1">Add</button>
                     </div>
                   </div>
                 </div>`
