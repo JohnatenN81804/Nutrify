@@ -21,7 +21,7 @@ router.get('/search', authenticateUser, (req, res) => {
 });
 
 // send static recipebox.html file to client
-router.get('/recipebox', (req, res) => {
+router.get('/recipeBox', (req, res) => {
 
   const filePath = path.join(__dirname, '../public/recipebox.html');
   res.sendFile(filePath);

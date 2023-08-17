@@ -83,7 +83,7 @@ function renderResults(searchData) {
                           <button class="mx-auto w-100 btn btn-success btn-green view-ingredients mt-1" text-nowrap>Ingredients</button>
                         </div>
                       </div>
-                      <button class="w-100 btn btn-primary btn-add-recipe mt-1">Add</button>
+                      <button class="w-100 btn btn-success btn-add-recipe mt-1">Add</button>
                     </div>
                   </div>
                 </div>`
@@ -143,6 +143,23 @@ function renderResults(searchData) {
     // call function here to do something else with this data, like store it in the user's recipe box..
     // example: function addRecipeToBox(name, type, cals, ingredientsQty, nutritionInfo, IngredientsInfo) {};
     // ...
+      // Send recipe data to the server
+    fetch('/api/recipeBook', { // create express recipeBook POST route
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(recipeName, cuisineType, calories, numberOfIngredients, imageLink, recipeLink),
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert(data.message);
+      location.href = '/recipeBox';
+    })
+    .catch(error => {
+      console.error(error);
+      alert('Adding recipe failed!');
+    });
   })
 };
 
