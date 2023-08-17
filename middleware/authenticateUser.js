@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const { User } = require('../models/define.js'); // Import the User model
 const router = express.Router();
 
-router.use((err, req, res, next) => {
+router.use((req, res, next) => {
 
   if ( !req.session.loggedIn ) {
     res.redirect('/login');

@@ -16,19 +16,19 @@ router.get('/signup', (req, res) => {
 });
 
 // render search results page via handlebars
-router.use('/search', (req, res) => {
+router.get('/search', authenticateUser, (req, res) => {
   res.render('searchResults');
 });
 
 // send static recipebox.html file to client
-router.use('/recipebox', authenticateUser, (req, res) => {
+router.get('/recipebox', (req, res) => {
 
   const filePath = path.join(__dirname, '../public/recipebox.html');
   res.sendFile(filePath);
 });
 
 // send static homepage.html
-router.use('/', (req, res) => {
+router.get('/', (req, res) => {
   const filePath = path.join(__dirname, '../public/homepage.html');
   res.sendFile(filePath);
 });
