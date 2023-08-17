@@ -1,21 +1,10 @@
-const path = require('path');
 const express = require('express');
 const router = express.Router();
+const apiRoutes = require('./api');
+const homeRoutes = require('./homeRoutes');
 
-// Import other routes if needed
-// const apiRoutes = require('./api');
+router.use('/api', apiRoutes);
+router.use('/', homeRoutes);
 
-// Use API routes if applicable
-// router.use('/api', apiRoutes);
-
-
-
-
-
-// Serve index.html using a GET route
-router.get('/', (req, res) => {
-  const indexPath = path.join(__dirname, '../public/index.html');
-  res.sendFile(indexPath);
-});
 
 module.exports = router;
