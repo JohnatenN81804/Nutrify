@@ -77,13 +77,12 @@ function renderResults(searchData) {
                     <div class="card-footer">
                       <div class="row">
                         <div class="col-6 col-sm-6 col-md-12 col-lg-12 col-xl-12 col-xxl-6 d-flex justify-content-center">
-                          <button class="mx-auto w-100 btn btn-success btn-green view-nutrition mt-1">%DV</button>
+                          <button class="mx-auto w-100 btn btn-success btn-green view-nutrition mt-1">Nutrients</button>
                         </div>
                         <div class="col-6 col-sm-6 col-md-12 col-lg-12 col-xl-12 col-xxl-6 d-flex justify-content-center">
                           <button class="mx-auto w-100 btn btn-success btn-green view-ingredients mt-1" text-nowrap>Ingredients</button>
                         </div>
-                      </div>
-                      <button class="w-100 btn btn-success btn-add-recipe mt-1">Add</button>
+                      <button class="btn btn-success btn-add-recipe mt-1">Add</button>
                     </div>
                   </div>
                 </div>`
@@ -123,20 +122,6 @@ function renderResults(searchData) {
       imageLink: imageLink,
       recipeLink: recipeLink
     };
-    
-    const nutritionList = card.find('#nutrition-container ul li')
-      .map(function() {
-        return $(this).text();
-      })
-      .get()
-      .join('\n');
-    
-    const ingredientList = card.find('#ingredients-container ul li')
-      .map(function() {
-        return $(this).text();
-      })
-      .get()
-      .join('\n');
   
     console.log(JSON.stringify(recipeData));
     // call function here to do something else with this data, like store it in the user's recipe box..
@@ -164,6 +149,13 @@ function renderResults(searchData) {
 
 // when search button is clicked, send input
 searchBtn.on('click', () => {
+  anime({
+    targets: '.navbar-brand',
+    translateX: 270,
+    direction: 'alternate',
+    easing: 'easeInOutSine'
+  });
+
   let searchQuery = $(`.search-box`).val();
 
   // check to see if search box contains any input
