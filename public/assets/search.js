@@ -144,7 +144,7 @@ function renderResults(searchData) {
     // example: function addRecipeToBox(name, type, cals, ingredientsQty, nutritionInfo, IngredientsInfo) {};
     // ...
       // Send recipe data to the server
-    fetch('/api/recipeBook', { // create express recipeBook POST route
+    fetch('/api/recipeBox', { // create express recipeBook POST route
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
