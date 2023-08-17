@@ -3,14 +3,9 @@ const searchBtn = $(`.search-btn`);
 const resultCards = $('#result-cards')
 
 async function fetchRecipe(searchQuery) {
-  // call fetch() method: post here..
-  // then express server will get that POST request with the search query and render the handlebars search page.
-  // any client-side logic browser for the search page results will then be on the /assets/search.js file.
-  // send "searchQuery" to express via the POST fetch() call.
-
   const apiSearchUrl = `${apiRootUrl}&q=${searchQuery}`;
+  
   const searchResponse = await fetch(apiSearchUrl);
-
   const searchData = await searchResponse.json();
   
   renderResults(searchData);
