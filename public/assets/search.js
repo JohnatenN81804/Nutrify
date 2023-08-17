@@ -114,6 +114,15 @@ function renderResults(searchData) {
     const numberOfIngredients = card.find('#number-of-ingredients span').text();
     const imageLink = card.find('.food-pic').attr('src');
     const recipeLink = card.find('.food-pic').parent().attr('href');
+
+    const recipeData = {
+      recipeName: recipeName,
+      cuisineType: cuisineType,
+      calories: calories,
+      numberOfIngredients: numberOfIngredients,
+      imageLink: imageLink,
+      recipeLink: recipeLink
+    };
     
     const nutritionList = card.find('#nutrition-container ul li')
       .map(function() {
@@ -129,27 +138,17 @@ function renderResults(searchData) {
       .get()
       .join('\n');
   
-    console.log(`
-      Recipe Name: ${recipeName}\n
-      Cuisine Type: ${cuisineType}\n
-      Calories: ${calories}\n
-      Number of Ingredients: ${numberOfIngredients}\n
-      Nutrition Details:\n${nutritionList}\n
-      Ingredients:\n${ingredientList}\n
-      Image Link: ${imageLink}\n
-      Recipe Link: ${recipeLink}\n
-    `);
-
+    console.log(JSON.stringify(recipeData));
     // call function here to do something else with this data, like store it in the user's recipe box..
     // example: function addRecipeToBox(name, type, cals, ingredientsQty, nutritionInfo, IngredientsInfo) {};
     // ...
-      // Send recipe data to the server
-    fetch('/api/recipeBox', { // create express recipeBook POST route
+    // Send recipe data to the server
+    fetch('/api/recipeBox', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(recipeName, cuisineType, calories, numberOfIngredients, imageLink, recipeLink),
+      body: JSON.stringify(recipeData),
     })
     .then(response => response.json())
     .then(data => {
