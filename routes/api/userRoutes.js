@@ -56,10 +56,28 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Authenticates the user for login 
+// Logout user by destroying user session
+router.delete('/', (req, res) => {
+  if (req.session) {
+    req.session.destroy(err => {
+      if (err) {
+        res.status(500).send('error logging out');
+      } else {
+        res.status(200).json({ message: 'Logout Successful!' });
+      }
+    });
+  } else {
+    res.end()
+  }
+});
+
 router.get('/protected', authenticateUser, (req, res) => {
   res.json({ message: 'You are an authenticated user' });
 });
+
+router.delete('/logout', (req, res) => {
+
+})
 
 module.exports = router;
 
