@@ -15,10 +15,6 @@
     --dark-brown: #604d3b;
 }
 
-nav {
-    border-bottom: 3px solid white;
-}
-
 .navbar {
     background-color: #75ba75;
     font-family: 'Pridi',serif;
@@ -31,9 +27,6 @@ nav {
     margin-left: 80px;
 }
 
-.nav-btn {
-    margin-left: 20px;
-}
 
 .landing-background-image {
     background: url('./images/shutterstock_568543210.png');
@@ -42,10 +35,6 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.btn {
-    border-radius: 0;
 }
 
 .btn-green {
@@ -58,7 +47,7 @@ nav {
 }
 
 .search {
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .blur-border {
@@ -66,25 +55,9 @@ nav {
     box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.4);
 }
 
-.nav-btn:hover {
-    background-color: white;
-    color: black;
-}
-
-#logout-btn:hover {
-    background-color: darkred;
-    color: white;
-}
-
-.search-box {
-    border-radius: 0;
-}
-
 .search-btn {
     background-color: var(--primary-green);
     border: none;
-    font-weight: bold;
-    border-radius: 0;
 }
 
 .search-btn:hover {
@@ -106,7 +79,6 @@ nav {
     box-shadow: 1px 4px 14px -8px rgba(0,0,0,0.6);
     -webkit-box-shadow: 1px 4px 14px -8px rgba(0,0,0,0.6);
     -moz-box-shadow: 1px 4px 14px -8px rgba(0,0,0,0.6);
-    border-radius: 0;
 }
 
 .card-text {
@@ -144,11 +116,6 @@ nav {
     display: none;
 }
 
-.btn-add-recipe {
-    background-color: var(--primary-brown);
-    border: none;
-}
-
 .btn-add-recipe:hover {
     background-color: var(--dark-brown);
 }
@@ -159,6 +126,11 @@ nav {
 
 .view-nutrition, .view-ingredients, .btn-add-recipe {
     font-size: 14px;
+}
+
+.btn-add-recipe {
+    background-color: var(--primary-brown);
+    border: none;
 }
 
 .recipebox-title {
