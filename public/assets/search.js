@@ -1,7 +1,6 @@
 const apiRootUrl = 'https://api.edamam.com/api/recipes/v2?type=public&app_id=19533129&app_key=99f99420f7ca835f437b3ab67e21166e';
 const searchBtn = $(`.search-btn`);
-const logoutBtn = $('#logout-btn');
-const resultCards = $('#result-cards');
+const resultCards = $('#result-cards')
 
 async function fetchRecipe(searchQuery) {
   const apiSearchUrl = `${apiRootUrl}&q=${searchQuery}`;
@@ -81,9 +80,9 @@ function renderResults(searchData) {
                           <button class="mx-auto w-100 btn btn-success btn-green view-nutrition mt-1">Nutrients</button>
                         </div>
                         <div class="col-6 col-sm-6 col-md-12 col-lg-12 col-xl-12 col-xxl-6 d-flex justify-content-center">
-                          <button class="mx-auto w-100 btn btn-success btn-green view-ingredients mt-1">Ingredients</button>
+                          <button class="mx-auto w-100 btn btn-success btn-green view-ingredients mt-1" text-nowrap>Ingredients</button>
                         </div>
-                      <button class="mx-auto w-100 btn btn-success btn-add-recipe mt-2">Add</button>
+                      <button class="btn btn-success btn-add-recipe mt-1">Add</button>
                     </div>
                   </div>
                 </div>`
@@ -139,6 +138,7 @@ function renderResults(searchData) {
     .then(response => response.json())
     .then(data => {
       alert(data.message);
+      location.href = '/recipeBox';
     })
     .catch(error => {
       console.error(error);
@@ -165,20 +165,4 @@ searchBtn.on('click', () => {
   } else {
     console.log(`\ninvalid search query (null)`);
   }
-});
-
-logoutBtn.on('click', () => {
-  // Make fetch POST to hit DELETE route to destroy user session, thus logging out user.
-  fetch('/api/user', {
-    method: 'DELETE'
-  })
-  .then(response => response.json())
-  .then(data => {
-    alert('logged out!');
-    location.href = '/';
-  })
-  .catch(error => {
-    console.error(error);
-    alert("logging out user failed");
-  })
 });
