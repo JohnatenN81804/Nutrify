@@ -3,7 +3,7 @@
 ## Team Members
 - Johnaten Nguyen
 - John Garrison
-- Beth Haynes (https://github.com/beffylaureen)
+- Beth Haynes
 - Peter Lauer
 
 
