@@ -81,9 +81,9 @@ function renderResults(searchData) {
                           <button class="mx-auto w-100 btn btn-success btn-green view-nutrition mt-1">Nutrients</button>
                         </div>
                         <div class="col-6 col-sm-6 col-md-12 col-lg-12 col-xl-12 col-xxl-6 d-flex justify-content-center">
-                          <button class="mx-auto w-100 btn btn-success btn-green view-ingredients mt-1" text-nowrap>Ingredients</button>
+                          <button class="mx-auto w-100 btn btn-success btn-green view-ingredients mt-1">Ingredients</button>
                         </div>
-                      <button class="btn btn-success btn-add-recipe mt-1">Add</button>
+                      <button class="mx-auto w-100 btn btn-success btn-add-recipe mt-2">Add</button>
                     </div>
                   </div>
                 </div>`
@@ -139,7 +139,6 @@ function renderResults(searchData) {
     .then(response => response.json())
     .then(data => {
       alert(data.message);
-      location.href = '/recipeBox';
     })
     .catch(error => {
       console.error(error);

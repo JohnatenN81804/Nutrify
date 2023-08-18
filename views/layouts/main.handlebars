@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Pacifico&family=Permanent+Marker&family=Pridi&display=swap" rel="stylesheet">
   <!-- custom stylesheet -->
   <link rel="stylesheet" href="/assets/style.css">
-  <title>Nutrify</title>
+  <title>Nutrify | Search</title>
 </head>
 <header>
   <!-- Navbar -->
@@ -22,14 +22,13 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link text-black" href="/recipeBox">Recipe Box</a>
+            <button class="btn btn-success nav-btn" id="recipes-btn" onclick="location.href='/recipeBox'">My Recipes</button>
           </li>
           <li class="nav-item">
-            {{!-- <a class="nav-link text-black" href="/">Logout</a> --}}
-            <button class="btn btn-success" id="logout-btn">Logout</button>
+            <button class="btn btn-success nav-btn" id="logout-btn" onclick="location.href='/'">Logout</button>
           </li>
         </ul>
       </div>
