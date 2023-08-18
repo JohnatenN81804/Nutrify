@@ -12,67 +12,19 @@
 hi
 
 ## MVP IDEA
-- Nutrition Tracker
-- Form = Login/Sign Up,
-- Database = MySQL,  Nutrition Counter, Protein,
-- Front-End = Bootstrap, JQuery, 
-- Back-End = HandleBars, Sequelize, 
+- Objective was to create a site where the user can search for foods and have easy access to nutritional facts
+- The user can log in
+- the user is redirected to the login page when trying to access the search page
+- the user can view nutrition facts of the food
 
+## Usage Instructions
 
-## Additional Ideas
+1. Vist site on heroku
+2. Sign up using the sign up page
+3. Create a account
+4. Click on search page
+5. Search for a food
 
-- Barcode/UPC scanner to make website more mobile resposive
+## Examples
 
-## Git Guide
-- Git branch "BRANCH_NAME"
-
-- Git checkout "BRANCH_NAME"
-
-- Git add -A
-
-- Git commit -m "__"
-
-- Git push origin "BRANCH_NAME" 
-
-- Do a pull request
-
-## Back-end development 
-
-- Data Base design
-  - what data are we storing?
-  - MySQL
-  - Data handling
-
-- Install necessary tools
-  - Dependencies
-
-- API End-Points
-
-- Authenticator
-
-- Middleware 
-  - input validation
-
-
-
-## Day 1 TODO
-- [X] Plan the project 
-- [X] Figure out the MVP 
-- [X] Make Repo and get everyone familar with git 
-- [X] Find API 
-
-
-## Day 2 TODO 
-- Make boiler plate express and sequelize files 
-- Back-end John, Peter
-- Front-end Johnaten/Home Page, Beth/Login-Signup page
-
-
-## Day 2 Landing page skeleton
-![Alt text](image.png)
-
-## Day 4 TODO
-- Make sure the bottons are working 
-- Organize Stucture of files 
-- Authorization
--
+![tacostest](https://github.com/JohnatenN81804/Group-Project-2/assets/137320162/4e887888-f470-4a73-a850-0aa77f14a87f)
