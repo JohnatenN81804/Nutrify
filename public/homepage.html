@@ -4,13 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nutrify - Home</title>
+  <title>Tech Blog</title>
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Pacifico&family=Permanent+Marker&family=Pridi&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Pacifico&family=Permanent+Marker&family=Pridi&display=swap" rel="stylesheet">
   <!-- Custom Styles -->
   <link rel="stylesheet" href="./assets/style.css">
 </head>
@@ -20,7 +18,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
       <div class="container">
-        <a class="navbar-brand" href="#">Nutrify</a>
+        <a class="navbar-brand" href="#">Tech Blog</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -31,16 +29,13 @@
               <a class="nav-link" href="/index">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/recipebox">Recipes</a>
+              <a class="nav-link" href="/articles">Articles</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/login">Login</a>
+              <a class="nav-link" href="/about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/signup">Sign Up</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/search">Search</a>
+              <a class="nav-link" href="/contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -52,50 +47,63 @@
     <div class="container text-center text-black">
       <div class="row justify-content-center">
         <div class="col-lg-6">
-          <h1 class="display-4">Welcome to Nutrify</h1>
-          <p class="lead">Search a trusted nutritional database for detailed food information. Find calories, macros,
-            vitamins, and more! Make informed choices for a healthier you.</p>
+          <h1 class="display-4">Welcome to Tech Blog</h1>
+          <p class="lead">Stay updated with the latest tech news, reviews, and insights from our expert bloggers.</p>
         </div>
       </div>
     </div>
   </section>
-  <section class="content py-5">
-    <div class="container text-center">
-      <h2 class="display-4 mb-4">How Nutrify Can Help You</h2>
+  <!-- Featured Articles Section -->
+  <section class="featured-articles py-5">
+    <div class="container">
+      <h2 class="display-4 mb-4">Featured Articles</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <img src="./assets/images/ai-icons-hand (1).jpg" class="card-img-top" alt="Article 1">
+            <div class="card-body">
+              <h5 class="card-title">The Future of Artificial Intelligence</h5>
+              <p class="card-text">Discover how AI is shaping industries and changing the way we live and work.</p>
+              <a href="/articles/1" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <img src="./assets/images/Blockchain_final-086b5b7b9ef74ecf9f20fe627dba1e34.png" class="card-img-top" alt="Article 2">
+            <div class="card-body">
+              <h5 class="card-title">Blockchain Technology Explained</h5>
+              <p class="card-text">Learn about the fundamentals of blockchain and its potential applications.</p>
+              <a href="/articles/2" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Latest Articles Section -->
+  <section class="latest-articles py-5">
+    <div class="container">
+      <h2 class="display-4 mb-4">Latest Articles</h2>
       <div class="row">
         <div class="col-md-4 mb-4">
-          <img id="picture1"      src="./assets/images/tacostest.JPG" alt="Icon 1" class="img-fluid mb-3 larger-image">
-          <h4 class="mb-3">Access to Nutritional Information</h4>
-          <p>Explore a vast database of foods and their nutritional content to make informed choices for your diet.</p>
+          <div class="card">
+            <img src="./assets/images/download.jpg" class="card-img-top" alt="Article 3">
+            <div class="card-body">
+              <h5 class="card-title">The Rise of Cybersecurity Threats</h5>
+              <p class="card-text">Explore the increasing challenges in cybersecurity and how to protect your data.</p>
+              <a href="/articles/3" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
         </div>
         <div class="col-md-4 mb-4">
-          <img src="./assets/images/nutrition_details..JPG" alt="Icon 2" class="img-fluid mb-3 larger-image">
-          <h4 class="mb-3">Track Your Daily Intake</h4>
-          <p>Log your daily meals to monitor your calorie intake, macronutrients, and achieve your nutritional goals.
-          </p>
+          <div class="card">
+            <img src="./assets/images/download (1).jpg" class="card-img-top" alt="Article 4">
+            <div class="card-body">
+              <h5 class="card-title">Smart Homes: The Future of Living</h5>
+              <p class="card-text">Discover the latest innovations in smart home technology and their benefits.</p>
+              <a href="/articles/4" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <img src="./assets/images/recipes.JPG" alt="Icon 3" class="img-fluid mb-3 larger-image">
-          <h4 class="mb-3">Discover Healthy Recipes</h4>
-          <p>Explore a variety of delicious and healthy recipes to keep your meals exciting and nutritious.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer text-white text-center py-3 fixed-bottom">
-    <div class="container">
-      <p class="mb-0">Be strong. Be healthy. Be happy.</p>
-    </div>
-  </footer>
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
-    integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script src="./assets/script.js"></script>
-</body>
-
-</html>
+ 

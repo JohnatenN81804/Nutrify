@@ -20,12 +20,7 @@ router.get('/search', authenticateUser, (req, res) => {
   res.render('searchResults');
 });
 
-// send static recipebox.html file to client
-router.get('/recipeBox', (req, res) => {
 
-  const filePath = path.join(__dirname, '../public/recipebox.html');
-  res.sendFile(filePath);
-});
 
 // send static homepage.html
 router.get('/', (req, res) => {
