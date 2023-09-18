@@ -28,9 +28,4 @@ hi
 ## Examples
 
 ![tacostest](https://github.com/JohnatenN81804/Group-Project-2/assets/137320162/4e887888-f470-4a73-a850-0aa77f14a87f)
-# group-project-03
-# tech-blog123
-# tech-blog123
-# tech-blog123
-# tech-blog123
-# tech-blog123
+
